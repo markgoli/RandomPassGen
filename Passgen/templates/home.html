@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .container {
+            background-color: rgb(4, 72, 72);
+            width: 50%;
+            border-radius: 5px;
+            color: rgb(45, 159, 159);
+            align-content: center;
+            justify-content: center;
+        }
+
+        .container h1 {
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        .container form {
+            align-content: start;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center><h1>Random Password Generator with Django</h1></center> -->
+
+    <center>
+        <div class="container">
+            <h1>Password Generator with Django</h1>
+            <form action="{% url 'passwdgen' %}" style="align-items: start;">
+                <p>Select PSK length:</p>
+                <select name="length" id="">
+                    <option value="8" selected="selected">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+                <br><br>
+                <input type="checkbox" name="uppercase" id=""> Uppercase
+                <br>
+                <br>
+                <input type="checkbox" name="digits" id=""> Digits
+                <br><br>
+                <input type="checkbox" name="specialcharacters" id=""> Special Characters
+                <br><br>
+                <input type="submit" value="Generate PSK"
+                    style="color: rgb(235, 235, 224); background-color: rgb(26, 131, 131); padding: 15px; margin-bottom:10px; border: none; border-radius: 5px;">
+    
+            </form>
+        </div>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
